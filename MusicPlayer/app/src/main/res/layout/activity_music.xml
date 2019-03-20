@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:titleTextColor="@color/windowBackground"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:titleTextColor="@color/windowBackground"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/iv_album_art"
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:src="@drawable/no_art_found"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/toolbar2" />
+
+    <SeekBar
+        android:id="@+id/sb_time_progress"
+        android:layout_below="@+id/iv_album_art"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_current_song_time"
+        android:text="00:00"
+        android:layout_below="@+id/sb_time_progress"
+        android:layout_alignLeft="@+id/sb_time_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_total_song_time"
+        android:text="55:55"
+        android:layout_below="@+id/sb_time_progress"
+        android:layout_alignRight="@+id/sb_time_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_song_name"
+        android:text="Song Name"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sb_time_progress"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_band_name"
+        android:text="Band Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_song_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_album_name"
+        android:text="Album Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_band_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageButton
+        android:id="@+id/button_rewind"
+        android:src="@drawable/ic_skip_previous_black_48dp"
+        android:layout_below="@+id/tv_album_name"
+        android:background="@color/transparent"
+        android:layout_toLeftOf="@+id/button_play_pause"
+        android:layout_width="75dp"
+        android:layout_height="75dp" />
+
+    <ImageButton
+        android:id="@+id/button_play_pause"
+        android:src="@drawable/ic_pause_circle_outline_black_48dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:layout_below="@+id/tv_album_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp" />
+
+    <ImageButton
+        android:id="@+id/button_forward"
+        android:src="@drawable/ic_skip_next_black_48dp"
+        android:background="@color/transparent"
+        android:layout_below="@+id/tv_album_name"
+        android:layout_toRightOf="@+id/button_play_pause"
+        android:layout_width="75dp"
+        android:layout_height="75dp" />
+
+</RelativeLayout>

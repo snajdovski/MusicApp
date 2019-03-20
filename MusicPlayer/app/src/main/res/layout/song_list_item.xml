@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingRight="5dp"
+    android:paddingLeft="15dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/tvSong_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Song name" />
+
+    <TextView
+        android:id="@+id/tvBand_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSong_name"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Band name" />
+
+    <TextView
+        android:id="@+id/tvSpace"
+        android:text=" • "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSong_name"
+        android:layout_toRightOf="@+id/tvBand_name"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/tvAlbum_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSong_name"
+        android:layout_toRightOf="@+id/tvSpace"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Album name" />
+
+    <ImageButton
+        android:id="@+id/button_info"
+        android:src="@drawable/ic_info_outline_black_24dp"
+        android:background="@color/transparent"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_width="36dp"
+        android:layout_height="36dp" />
+
+
+</RelativeLayout>
